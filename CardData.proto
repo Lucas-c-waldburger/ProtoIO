@@ -1,0 +1,33 @@
+syntax = "proto2";
+
+package CD;
+
+message CardData
+{
+	optional int32 id = 1;	
+	optional string name = 2;
+
+	enum CardType
+	{
+		CT_ANY = 0;
+		CT_PKMN = 1;
+		CT_ENERGY = 2;
+		CT_TRAINER = 3;
+	}
+
+	enum EnergyType
+	{
+		ET_ANY = 0;
+		ET_WATER = 1;
+		ET_FIRE = 2;
+		ET_GRASS = 3;
+		ET_ELECTRIC = 4;
+		ET_PSYCHIC = 5;
+		ET_FIGHTING = 6;
+		ET_COLORLESS = 7;
+	}
+
+	optional CardType cType = 3;
+	optional EnergyType eType = 4;
+}
+
