@@ -31,3 +31,9 @@ message CardData
 	optional EnergyType eType = 4;
 }
 
+message PkmnData
+{
+	optional CardData cd = 1;
+
+
+}

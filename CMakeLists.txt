@@ -3,4 +3,7 @@ project(protobufTest2)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(protobufTest2 main.cpp ProtoIO.cpp ProtoIO.h CDMake.cpp CDMake.h)
+find_package(Protobuf REQUIRED)
+
+
+add_executable(protobufTest2 main.cpp src/ProtoIO.cpp include/ProtoIO.h src/Utils.cpp include/Utils.h CardDataSrcMap.cpp CardDataSrcMap.h CDAliases.cpp CDAliases.h CDWrappers.cpp CDWrappers.h include/defs.h include/defs.h)
