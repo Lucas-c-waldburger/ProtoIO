@@ -2,7 +2,7 @@
 ProtoIO is a cross-platform tool to write a container of protobuf messages to a single delimited file and read them back into a container
 
 The functions writeDelimitedTo() and readDelimitedFrom() are adapted from [Kenton Varda's Protobuf patch submission.](https://stackoverflow.com/questions/2340730/are-there-c-equivalents-for-the-protocol-buffers-delimited-i-o-functions-in-ja/22927149#22927149)
-They are used internally by thee two public-facing functions in the ProtoIO namespace: writeMessagesToFile and readMessagesFromFile
+They are used internally by two public-facing functions in the ProtoIO namespace: writeMessagesToFile and readMessagesFromFile
 
 WriteMessagesToFile() and readMessagesFromFile() each take two parameters: a string filename, and a reference to an stl container of Message pointers. 
 In the case of readMessages, the container passed in will have the read message data appended to it.
@@ -13,5 +13,5 @@ The protobuf source code is included inside the "dependencies" folder. The top-l
 
 Alternatively, one can build the project using clang/g++. This requires the user to already have protobuf installed.
 
-    // replace /usr/local/lib with your protobuf install path
+    // (replace /usr/local/lib with your protobuf install path)
     clang++ -std=c++14 -stdlib=libc++ main.cpp src/ProtoIO.cpp src/Utils.cpp dependencies/CardData.pb.cc -L/usr/local/lib -lprotobuf -o ProtoIO
