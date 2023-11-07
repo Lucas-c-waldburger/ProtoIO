@@ -8,11 +8,13 @@
 // TO RUN:
     // ./build/ProtoIO
 
-const std::string FILE_NAME = "../MsgFileOutput/VecTest.txt";
+const std::string FILE_NAME = "VecTest.txt";
 
 int main()
 {
     using namespace Utils;
+
+    const std::string FILE_PATH = constructFilepath(FILE_NAME);
 
     //// WRITING FROM CONTAINER TO FILE
 
@@ -24,7 +26,7 @@ int main()
 
     std::vector<CardData*> cdMessages = {c1, c2, c3};
 
-    ProtoIO::writeMessagesToFile(FILE_NAME, cdMessages);
+    ProtoIO::writeMessagesToFile(FILE_PATH, cdMessages);
 
     for (auto& msg : cdMessages)
         delete msg;
@@ -34,7 +36,7 @@ int main()
 
     //// READING FROM FILE TO CONTAINER
 
-    ProtoIO::readMessagesFromFile(FILE_NAME, cdMessages);
+    ProtoIO::readMessagesFromFile(FILE_PATH, cdMessages);
 
     for (auto& msg : cdMessages)
     {
