@@ -1,4 +1,5 @@
 # ProtoIO
+ProtoIO is a cross-platform tool to write a container of protobuf messages to a single delimited file and read them back into a container
 
 The functions writeDelimitedTo() and readDelimitedFrom() are adapted from [Kenton Varda's Protobuf patch submission.](https://stackoverflow.com/questions/2340730/are-there-c-equivalents-for-the-protocol-buffers-delimited-i-o-functions-in-ja/22927149#22927149)
 They are used internally by thee two public-facing functions in the ProtoIO namespace: writeMessagesToFile and readMessagesFromFile
