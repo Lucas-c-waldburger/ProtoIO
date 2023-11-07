@@ -4,7 +4,7 @@ ProtoIO is a cross-platform tool to write a container of protobuf messages to a 
 The functions writeDelimitedTo() and readDelimitedFrom() are adapted from [Kenton Varda's Protobuf patch submission.](https://stackoverflow.com/questions/2340730/are-there-c-equivalents-for-the-protocol-buffers-delimited-i-o-functions-in-ja/22927149#22927149)
 They are used internally by two public-facing functions in the ProtoIO namespace: writeMessagesToFile and readMessagesFromFile
 
-WriteMessagesToFile() and readMessagesFromFile() each take two parameters: a string filename, and a reference to an stl container of Message pointers. 
+WriteMessagesToFile() and readMessagesFromFile() each take two parameters: a string filename, and a reference to an STL container of Message pointers. 
 In the case of readMessages, the container passed in will have the read message data appended to it.
 Both functions are templated so that they can work with a wide range of STL containers (those that conform to template <typename, Allocator>). 
 Additionally, the macros at the top of ProtoIO.h define the proper includes depending on what system the user is running; The OPEN_WRITE and OPEN_READ function definitions are able to account for the differences in syntax.
