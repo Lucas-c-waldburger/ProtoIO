@@ -4,9 +4,9 @@
 #include "include/Utils.h"
 
 // TO COMPILE: (clang or g++)
-    // clang++ -std=c++17 -stdlib=libc++ main.cpp src/ProtoIO.cpp src/Utils.cpp dependencies/CardData.pb.cc -L/usr/local/lib -lprotobuf -o build/ProtoIO
+    // clang++ -std=c++14 -stdlib=libc++ main.cpp src/ProtoIO.cpp src/Utils.cpp dependencies/CardData.pb.cc -L/usr/local/lib -lprotobuf -o ProtoIO
 // TO RUN:
-    // ./build/ProtoIO
+    // ./ProtoIO
 
 const std::string FILE_NAME = "VecTest.txt";
 
@@ -14,7 +14,7 @@ int main()
 {
     using namespace Utils;
 
-    const std::string FILE_PATH = constructFilepath(FILE_NAME);
+    const std::string FILE_PATH = "MsgFileOutput/VecTest.txt";
 
     //// WRITING FROM CONTAINER TO FILE
 

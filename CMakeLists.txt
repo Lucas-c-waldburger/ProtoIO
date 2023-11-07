@@ -1,15 +1,12 @@
 cmake_minimum_required(VERSION 3.24)
 project(ProtoIO)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 
 find_package(Protobuf REQUIRED)
 
 include_directories(${Protobuf_INCLUDE_DIRS})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-
-#changes default runtime directory from cmake-build-debug to /build
-#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build)
 
 add_executable(
         ProtoIO
@@ -26,4 +23,4 @@ add_executable(
 
 target_link_libraries(ProtoIO ${Protobuf_LIBRARIES})
 
-set_target_properties(ProtoIO PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/build")
+set_target_properties(ProtoIO PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}")
