@@ -1,0 +1,4 @@
+Required.Proto3.TextFormatInput.StringLiteralBasicEscapesBytes.ProtobufOutput
+Required.Proto3.TextFormatInput.StringLiteralBasicEscapesBytes.TextFormatOutput
+Required.Proto3.TextFormatInput.StringLiteralBasicEscapesString.ProtobufOutput
+Required.Proto3.TextFormatInput.StringLiteralBasicEscapesString.TextFormatOutput
