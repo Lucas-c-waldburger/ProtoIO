@@ -26,9 +26,11 @@
 #define CLOSE_FILE(fd) (_close(fd))
 #endif
 
+const std::string FILE_NAME = "../MsgFileOutput/VecTest.txt";
 
 namespace ProtoIO
 {
+
     bool writeDelimitedTo(google::protobuf::Message* message,
                           google::protobuf::io::ZeroCopyOutputStream* rawOutput);
 

@@ -2,6 +2,7 @@
 #define PROTOBUFTEST2_UTILS_H
 #include "defs.h"
 #include <ostream>
+#include <filesystem>
 
 namespace Utils
 {

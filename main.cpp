@@ -8,8 +8,6 @@
 // TO RUN:
     // ./main
 
-const std::string FILE_NAME = "MsgFileOutput/VecTest.txt";
-
 int main()
 {
     using namespace Utils;
