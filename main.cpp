@@ -3,10 +3,12 @@
 #include "include/ProtoIO.h"
 #include "include/Utils.h"
 
-// TO COMPILE:
-    // clang++ -std=c++11 -stdlib=libc++ main.cpp src/ProtoIO.cpp src/Utils.cpp dependencies/CardData.pb.cc -L/usr/local/lib -lprotobuf -o main
+// TO COMPILE: (clang or g++)
+    // clang++ -std=c++17 -stdlib=libc++ main.cpp src/ProtoIO.cpp src/Utils.cpp dependencies/CardData.pb.cc -L/usr/local/lib -lprotobuf -o build/ProtoIO
 // TO RUN:
-    // ./main
+    // ./build/ProtoIO
+
+const std::string FILE_NAME = "../MsgFileOutput/VecTest.txt";
 
 int main()
 {

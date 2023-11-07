@@ -26,7 +26,6 @@
 #define CLOSE_FILE(fd) (_close(fd))
 #endif
 
-const std::string FILE_NAME = "../MsgFileOutput/VecTest.txt";
 
 namespace ProtoIO
 {

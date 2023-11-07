@@ -2,6 +2,9 @@
 
 void Utils::assignCardData(CardData* cData, int id, const std::string &nm, CardType ct, EnergyType et)
 {
+    auto path = std::filesystem::current_path();
+    std::cout << path.filename();
+
     cData->set_id(id);
     cData->set_name(nm);
     cData->set_ctype(ct);
