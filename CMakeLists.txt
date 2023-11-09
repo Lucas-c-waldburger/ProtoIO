@@ -3,6 +3,12 @@ project(ProtoIO)
 
 set(CMAKE_CXX_STANDARD 14)
 
+option(BUILD_PROTOBUF "Run the protobuf cmake from dependencies folder" OFF)
+
+if (BUILD_PROTOBUF)
+    add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/dependencies/protobuf _protobuf)
+endif(BUILD_PROTOBUF)
+
 find_package(Protobuf REQUIRED)
 
 include_directories(${Protobuf_INCLUDE_DIRS})
