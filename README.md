@@ -9,7 +9,7 @@ In the case of readMessages, the container passed in will have the read message 
 Both functions are templated so that they can work with a wide range of STL containers (those that conform to template <typename, Allocator>). 
 Additionally, the macros at the top of ProtoIO.h define the proper includes depending on what system the user is running; The OPEN_WRITE/OPEN_READ/CLOSE_FILE function definitions are able to account for the differences in syntax.
 
-The protobuf source code is included inside the "dependencies" folder. The top-level CMakeLists.txt should be able to properly locate the protobuf dependencies. 
+The protobuf source code is included inside the "dependencies" folder. The top-level CMakeLists.txt includes the option BUILD_PROTOBUF if not already installed on your machine. (OFF by default)
 
 Alternatively, one can build the project using clang/g++. This requires the user to already have protobuf installed.
 
